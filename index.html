@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Translate Clone</title>
+
+  <!-- MDI Icons -->
+  <!-- <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.5.95/css/materialdesignicons.min.css" /> -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Tailwind -->
+  <script src="tailwild.min.css"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    
+  </style>
+</head>
+
+<body class="translate">
+  <!-- Page Container -->
+  <div class="relative bg-white" >
+    <!-- Header Container -->
+    <div class="flex">
+      <header class="flex flex-grow px-5 py-2 border-b border-gray-200">
+        <div class="flex-none">
+            <div class="flex flex-grow mt-1">
+              <div class="ml-2 my-auto text-lg font-medium text-gray-500">
+                ATC Translator
+              </div>
+            </div>
+          </div>
+      </header>
+    </div>
+
+    <!-- Translator -->
+    <div class="container-content">
+      <div class="container mx-auto px-0 lg:px-24">
+
+        <!-- Body -->
+        <div class="flex flex-row">
+          <div class="pb-4 top-32 h z-10 w-full">
+            <!-- Translator Container -->
+            <div class="bg-white rounded-lg border border-gray-200 drop-shadow-sm shadow-sm">
+              <!-- Language Bar -->
+              <div class="flex border-b border-gray-300">
+                <!-- From Languages -->
+                <div class="w-7/12">
+                  <nav class="flex flex-row rounded-tl-lg btn-lang">
+                    <!-- Lang: Turkish -->
+                    <button class="uppercase py-3.5 px-3 text-gray-600 font-semibold text-xs lg:text-sm hover:bg-gray-50
+                     hover:text-gray-700 transition-colors 
+                     duration-100 text-blue-500 
+                     hover:text-blue-600 
+                     border-b-2 border-blue-500
+                     btn-source-lang
+                     "
+                     id="sBtn-text"
+                     role="tab"
+                    value="eng">
+                      English
+                    </button>
+
+                    <!-- Lang: English -->
+                    <button class="uppercase py-3.5 px-3 text-gray-600 font-semibold   text-xs lg:text-sm hover:bg-gray-50 hover:text-gray-700 transition-colors duration-100 btn-source-lang "
+                    role="tab"
+                    value="vie"
+                    >
+                      Vietnamese
+                    </button>
+
+                    <!-- Lang: Turkish -->
+                    <button class="uppercase py-3.5 px-3
+                      text-gray-600 font-semibold 
+                      text-xs lg:text-sm
+                      hover:bg-gray-50 hover:text-gray-700
+                      transition-colors duration-100
+                      btn-source-lang
+                      "
+                      role="tab"
+                      value="kor"
+                      >
+                      Korea
+                    </button>
+
+                    <!-- More Languages -->
+                    <div class="select-menu">
+                      <div class="select-btn">
+                          <!-- <span class="sBtn-text">hahahahaah</span> -->
+                          <i class="bx bx-chevron-down"></i>
+                      </div>
+              
+                      <ul class="options">
+                          <li class="option">
+                              <span class="option-text">Japanese<span>
+                          </li>
+                          <li class="option">
+                              <span class="option-text">Thailand</span>
+                          </li>
+                          <li class="option">
+                              <span class="option-text">India</span>
+                          </li>
+                          <li class="option">
+                              <span class="option-text">Chinese</span>
+                          </li>
+                          <li class="option">
+                              <span class="option-text">Brazil</span>
+                          </li>
+                      </ul>
+                  </div>
+                  </nav>
+                </div>
+
+                <!-- Switch Languages -->
+                <div class="w-1/12">
+                  <div class="flex items-center justify-center">
+                    <button class="hover:bg-gray-100 rounded-full 
+                      w-10 h-10 mt-1
+                      transition-colors duration-100">
+                      <i class="bx bx-transfer"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- To Languages -->
+                <div class="w-7/12">
+                  <nav class="flex flex-row rounded-tl-lg ">
+                    <!-- Lang: English -->
+                    <button class="uppercase py-3.5 px-3
+                      text-gray-600 font-semibold 
+                      text-xs lg:text-sm
+                      hover:bg-gray-50 hover:text-gray-700
+                      transition-colors duration-100 text-blue-500 hover:text-blue-600 border-b-2 border-blue-500">
+                      Vietnamese
+                    </button>
+
+                    <!-- Lang: Turkish -->
+                    <button class="uppercase py-3.5 px-3
+                      text-gray-600 font-semibold 
+                      text-xs lg:text-sm
+                      hover:bg-gray-50 hover:text-gray-700
+                      transition-colors duration-100
+                      ">
+                      English
+                    </button>
+
+                    <!-- Lang: Japanese -->
+                    <button class="uppercase py-3.5 px-3
+                      text-gray-600 font-semibold 
+                      text-xs lg:text-sm
+                      hover:bg-gray-50 hover:text-gray-700
+                      transition-colors duration-100">
+                      Korea
+                    </button>
+
+                    <!-- More Languages -->
+                    <!-- More Languages -->
+                    <div class="select-menu">
+                      <div class="select-btn">
+                        <!-- <span class="sBtn-text">hahahahaah</span> -->
+                        <i class="bx bx-chevron-down"></i>
+                      </div>
+                  
+                      <ul class="options">
+                        <li class="option">
+                          <span class="option-text">Japanese<span>
+                        </li>
+                        <li class="option">
+                          <span class="option-text">Thailand</span>
+                        </li>
+                        <li class="option">
+                          <span class="option-text">India</span>
+                        </li>
+                        <li class="option">
+                          <span class="option-text">Chinese</span>
+                        </li>
+                        <li class="option">
+                          <span class="option-text">Brazil</span>
+                        </li>
+                      </ul>
+                    </div>
+              
+                  </nav>
+                </div>
+              </div>
+
+              <!-- Translate Inputs -->
+              <div class="flex">
+                <!-- Input Container -->
+                <div class="w-6/12 border-r border-gray-200 p-4">
+                  <div class="h-40">
+                    <div class="flex flex-row">
+                      <!-- Input Area -->
+                      <textarea class="resize-none w-full focus:outline-none
+                        text-base lg:text-2xl text-blak
+                        custom-scrollbar" rows="5" spellcheck="false" maxlength="5000" x-model="sourceText"
+                        x-on:keyup="translatedText = await translation(sourceText)"></textarea>
+
+                      <button class="hover:bg-gray-100 rounded-full 
+                          w-10 h-10 mt-1
+                          transition-colors duration-100" title="Clear" x-show="sourceText.length"
+                        x-on:click="sourceText = ''; translatedText = 'Translation';">
+                        <i class="bx bx-x text-red-400"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Input Buttons -->
+                  <div class="h-10">
+                    <div class="flex flex-grow">
+                      <div class="flex-none">
+
+                        <button class="hover:bg-gray-200 rounded-full 
+                          w-10 h-10
+                          transition-colors duration-100" x-show="sourceText.length">
+                          <i class="bx bx-volume-full  text-gray-600"></i>
+                        </button>
+                      </div>
+
+                      <div class="grow">
+                        <div class="flex float-right">
+                          <div class="text-sm text-gray-400 pt-5" x-text="`${sourceText.length}/5000`">
+                            0/5000
+                          </div>
+
+                          <button class="hover:bg-gray-200 rounded-full 
+                            w-10 h-10 mt-2 ml-2
+                            transition-colors duration-100">
+                            <i class='bx bxs-keyboard mdi-18px text-gray-600' ></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Output Container -->
+                <div class="w-6/12 bg-gray-100 rounded-br-lg p-4">
+                  <div class="h-40">
+                    <!-- Output Area -->
+                    <div class="text-base lg:text-2xl text-black h-10" :class="{ 'opacity-60' : !sourceText.length }"
+                      x-text="translatedText"></div>
+                  </div>
+
+                  <!-- Output Buttons -->
+                  <div class="h-10">
+                    <div class="flex flex-grow" x-show="sourceText.length">
+                      <div class="flex-none">
+                        <button class="hover:bg-gray-200 rounded-full 
+                          w-10 h-10 mt-1
+                          transition-colors duration-100">
+                          <i class="bx bx-volume-full  text-gray-600"></i>
+                        </button>
+                      </div>
+
+                      <div class="grow">
+                        <div class="flex float-right">
+                          <button id="copy-translation" class="hover:bg-gray-200 rounded-full 
+                              w-10 h-10 mt-1
+                              transition-colors duration-100" :data-clipboard-text="translatedText"
+                            x-on:click="Toastify({text: 'Translation copied to your clipboard.', className: 'success rounded-md'}).showToast()">
+                            <i class="bx bx-copy mdi-18px text-gray-600"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
